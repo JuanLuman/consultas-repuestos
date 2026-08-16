@@ -4,11 +4,11 @@ Sistema web para gestionar las consultas de precio de repuestos entre Ventas y C
 
 ## El problema
 
-Cuando un vendedor no tiene un repuesto en stock, tiene que pedirle el precio a Compras. Hoy esto se hace por correo electrónico: el vendedor escribe un mail preguntando por un número de pieza, y espera.
+Cuando un vendedor no tiene un repuesto en stock, tiene que pedirle el precio a Compras. Hoy esto se hace por correo electrónico: el vendedor escribe un mail preguntando por un número de pieza, y espera. Estas consultas son variables, pero no son un caso raro: hay días con 5 o más.
 
 El problema es que los hilos de correo se mezclan. Como varias consultas terminan referenciando el mismo número de pieza, es fácil perder el hilo correcto, reenviar la pregunta equivocada o responder sobre una pieza distinta a la que se está pidiendo. Nadie tiene una bandeja única con todas las consultas pendientes: cada uno revisa su propio correo, así que no hay forma de saber, a simple vista, si una consulta ya está siendo gestionada por otra persona de Compras o si sigue sin respuesta. Tampoco hay forma de saber cuánto tiempo lleva esperando cada consulta.
 
-El resultado es que el cliente, que está esperando en el mostrador o por teléfono, puede quedar horas sin una respuesta, mientras la consulta se pierde entre decenas de correos sin ningún indicador de urgencia ni de estado.
+El resultado es que el cliente, que está esperando en el mostrador o por teléfono, termina esperando: en general, la demora es de 24 horas en adelante para obtener una respuesta, mientras la consulta se pierde entre decenas de correos sin ningún indicador de urgencia ni de estado.
 
 ## La solución
 
